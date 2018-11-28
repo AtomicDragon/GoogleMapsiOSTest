@@ -7,6 +7,5 @@ target 'GoogleMapsiOSTest' do
   
   # Pods for GoogleMapsiOSTest
   pod 'GoogleMaps'
-  pod 'GooglePlaces'
 
 end

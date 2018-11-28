@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13300673745A17455096D31D /* libPods-GoogleMapsiOSTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD716515A23A5B371C7052C /* libPods-GoogleMapsiOSTest.a */; };
 		D81D83CF21A47EAE0031DB87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D83CE21A47EAE0031DB87 /* AppDelegate.m */; };
 		D81D83D221A47EAE0031DB87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D83D121A47EAE0031DB87 /* ViewController.m */; };
 		D81D83D521A47EAE0031DB87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D83D321A47EAE0031DB87 /* Main.storyboard */; };
 		D81D83D721A47EAF0031DB87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81D83D621A47EAF0031DB87 /* Assets.xcassets */; };
 		D81D83DA21A47EAF0031DB87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D83D821A47EAF0031DB87 /* LaunchScreen.storyboard */; };
 		D81D83DD21A47EAF0031DB87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D83DC21A47EAF0031DB87 /* main.m */; };
+		D89013EF21ADDAC0007D36BD /* libPods-GoogleMapsiOSTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD716515A23A5B371C7052C /* libPods-GoogleMapsiOSTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +31,7 @@
 		D81D83D921A47EAF0031DB87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81D83DB21A47EAF0031DB87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D81D83DC21A47EAF0031DB87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D89013ED21ADD3A4007D36BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EBD716515A23A5B371C7052C /* libPods-GoogleMapsiOSTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleMapsiOSTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -39,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13300673745A17455096D31D /* libPods-GoogleMapsiOSTest.a in Frameworks */,
+				D89013EF21ADDAC0007D36BD /* libPods-GoogleMapsiOSTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +59,7 @@
 		BD07AF5DDF60505E2B60C606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D89013ED21ADD3A4007D36BD /* CoreLocation.framework */,
 				EBD716515A23A5B371C7052C /* libPods-GoogleMapsiOSTest.a */,
 				524F0C84854B3A19C66B22C3 /* libPods-GoogleMapsiOSTestTests.a */,
 				A3202D39A56000266132E8EE /* libPods-GoogleMapsiOSTestUITests.a */,
@@ -199,14 +201,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMapsiOSTest/Pods-GoogleMapsiOSTest-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
