@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D804705921B633C900FBDC60 /* IndiaOSM.zip in Resources */ = {isa = PBXBuildFile; fileRef = D804705821B633C900FBDC60 /* IndiaOSM.zip */; };
+		D804706021B635C200FBDC60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D804705F21B635C200FBDC60 /* libz.tbd */; };
 		D81D83CF21A47EAE0031DB87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D83CE21A47EAE0031DB87 /* AppDelegate.m */; };
 		D81D83D221A47EAE0031DB87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81D83D121A47EAE0031DB87 /* ViewController.m */; };
 		D81D83D521A47EAE0031DB87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D83D321A47EAE0031DB87 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		524F0C84854B3A19C66B22C3 /* libPods-GoogleMapsiOSTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleMapsiOSTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3202D39A56000266132E8EE /* libPods-GoogleMapsiOSTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleMapsiOSTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D6E29D0810908CEF9ED1EA /* Pods-GoogleMapsiOSTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsiOSTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsiOSTest/Pods-GoogleMapsiOSTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D804705821B633C900FBDC60 /* IndiaOSM.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = IndiaOSM.zip; sourceTree = "<group>"; };
+		D804705F21B635C200FBDC60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D81D83CA21A47EAE0031DB87 /* GoogleMapsiOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsiOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81D83CD21A47EAE0031DB87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D81D83CE21A47EAE0031DB87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D804706021B635C200FBDC60 /* libz.tbd in Frameworks */,
 				D89013EF21ADDAC0007D36BD /* libPods-GoogleMapsiOSTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +64,7 @@
 		BD07AF5DDF60505E2B60C606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D804705F21B635C200FBDC60 /* libz.tbd */,
 				D89013ED21ADD3A4007D36BD /* CoreLocation.framework */,
 				EBD716515A23A5B371C7052C /* libPods-GoogleMapsiOSTest.a */,
 				524F0C84854B3A19C66B22C3 /* libPods-GoogleMapsiOSTestTests.a */,
@@ -97,6 +103,7 @@
 				D81D83D821A47EAF0031DB87 /* LaunchScreen.storyboard */,
 				D81D83DB21A47EAF0031DB87 /* Info.plist */,
 				D81D83DC21A47EAF0031DB87 /* main.m */,
+				D804705821B633C900FBDC60 /* IndiaOSM.zip */,
 			);
 			path = GoogleMapsiOSTest;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D83DA21A47EAF0031DB87 /* LaunchScreen.storyboard in Resources */,
+				D804705921B633C900FBDC60 /* IndiaOSM.zip in Resources */,
 				D81D83D721A47EAF0031DB87 /* Assets.xcassets in Resources */,
 				D81D83D521A47EAE0031DB87 /* Main.storyboard in Resources */,
 			);
@@ -366,13 +374,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9BMJ4X7FQ5;
+				DEVELOPMENT_TEAM = UXB5K7N45H;
 				INFOPLIST_FILE = GoogleMapsiOSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.blackdragon.GoogleMapsiOSTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actioncharts.ZZTEST;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,13 +392,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9BMJ4X7FQ5;
+				DEVELOPMENT_TEAM = UXB5K7N45H;
 				INFOPLIST_FILE = GoogleMapsiOSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.blackdragon.GoogleMapsiOSTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actioncharts.ZZTEST;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

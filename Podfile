@@ -7,5 +7,6 @@ target 'GoogleMapsiOSTest' do
   
   # Pods for GoogleMapsiOSTest
   pod 'GoogleMaps'
+  pod 'SSZipArchive'
 
 end

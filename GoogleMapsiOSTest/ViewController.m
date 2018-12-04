@@ -8,18 +8,18 @@
 
 #import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "ZipArchive.h"
 
-#define DocumentDirectory  [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define CachesDirectory  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface TestTileLayer : GMSSyncTileLayer
 @end
 
 @implementation TestTileLayer
 - (UIImage *)tileForX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom {
-    // On every odd tile, render an image.
-    
+    // On every tile, render an image.
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *tilePath = [DocumentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"OSM_tiles/%lu/%lu/%lu.png",(unsigned long)zoom,(unsigned long)x,(unsigned long)y]];
+    NSString *tilePath = [CachesDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"IndiaOSM/OSM_tiles/%lu/%lu/%lu.png",(unsigned long)zoom,(unsigned long)x,(unsigned long)y]];
     NSLog(@"Looking for %lu,%lu,%lu at location %@", (unsigned long)x, (unsigned long)y, (unsigned long)zoom, tilePath);
     
     if ([fileManager fileExistsAtPath: tilePath]) {
@@ -37,6 +37,7 @@
 
 @implementation ViewController{
     GMSMapView *_mapView;
+    NSInteger _mapSource;
     BOOL _firstLocationUpdate;
 }
 
@@ -46,7 +47,6 @@
     //Load Map
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:19.139417 longitude:72.868337 zoom:12];
     _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    _mapView.delegate = self;
     _mapView.settings.compassButton = YES;
     _mapView.settings.myLocationButton = YES;
     
@@ -61,12 +61,27 @@
     GMSTileLayer *layer = [[TestTileLayer alloc] init];
     layer.map = _mapView;
     
+    BOOL success;
+    NSError *error;
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"IndiaOSM.zip"];
+    
+    success = [fileManager fileExistsAtPath:filePath];
+    if (!success) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"IndiaOSM" ofType:@"zip"];
+        success = [fileManager copyItemAtPath:path toPath:filePath error:&error];
+        [SSZipArchive unzipFileAtPath:filePath toDestination:documentsDirectory];
+    }
+
     
     // Ask for My Location data after the map has already been added to the UI.
     dispatch_async(dispatch_get_main_queue(), ^{
         self->_mapView.myLocationEnabled = YES;
     });
+    
 }
 
 - (void)mapView:(GMSMapView *)mapView didTapMyLocation:(CLLocationCoordinate2D)location {
@@ -105,7 +120,6 @@
                                                          zoom:14];
     }
 }
-
 @end
 
 

@@ -4,17 +4,21 @@ PODS:
   - GoogleMaps/Base (2.7.0)
   - GoogleMaps/Maps (2.7.0):
     - GoogleMaps/Base
+  - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
   - GoogleMaps
+  - SSZipArchive
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GoogleMaps
+    - SSZipArchive
 
 SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
-PODFILE CHECKSUM: 629d850015199323724abb594abc7cee92105808
+PODFILE CHECKSUM: 5e6f26c2a4ec8b0a77e0f351994b97b296c24711
 
 COCOAPODS: 1.5.3
